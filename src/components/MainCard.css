@@ -1,0 +1,21 @@
+
+.likeBtn {
+    color: #FDB50C;
+    border: 1px solid #FDB50C;
+    padding: 8px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: small;
+    width: 2.3rem;
+    text-align: center;
+}
+
+.likeBtn:hover{
+     color: #dc3545; 
+     background-color: #ffc94b;
+    transition: color 0.3s ease;
+}
+
+.favs {
+   white-space: nowrap;
+}

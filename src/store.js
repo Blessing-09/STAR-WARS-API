@@ -35,14 +35,18 @@ export default function storeReducer(store, action = {}) {
           films: action.payload
       }
       case 'addFavorite':
-        return {
-          ...store,
-          favourites: [...store.favourites, action.payload]
-          }
+        if(!store.favorites.includes(action.payload)) {
+          return {
+            ...store,
+            favorites: [...store.favorites, action.payload]
+            }
+        }
+        return store;
+
       case 'removeFavorite':
         return {
           ...store,
-          favourites: store.favourites.filter(item => item.id !== action.payload.id)
+          favorites: store.favorites.filter(item => item !== action.payload)
           }
 
     default:
